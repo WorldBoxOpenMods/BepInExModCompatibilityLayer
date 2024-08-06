@@ -34,10 +34,10 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
-          <HintPath>Libraries\0Harmony.dll</HintPath>
+          <HintPath>..\Libraries\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx">
-          <HintPath>Libraries\BepInEx.dll</HintPath>
+          <HintPath>..\Libraries\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="mscorlib" />
         <Reference Include="Newtonsoft.Json">
@@ -49,13 +49,13 @@
         <Reference Include="System.Numerics" />
         <Reference Include="System.Xml" />
         <Reference Include="UnityEngine">
-          <HintPath>Libraries\UnityEngine.dll</HintPath>
+          <HintPath>..\Libraries\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>..\Libraries\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.IMGUIModule">
-          <HintPath>Libraries\UnityEngine.IMGUIModule.dll</HintPath>
+          <HintPath>..\Libraries\UnityEngine.IMGUIModule.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
