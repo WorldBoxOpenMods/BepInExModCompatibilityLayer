@@ -25,7 +25,7 @@ namespace BepinexModCompatibilityLayer {
       if (BepinexModCompatibilityLayerConfig.EnableWindowIdSeparator) {
         Logger.LogInfo("Patching GUILayout.DoWindow...");
         Harmony harmony = new Harmony(BepinexModCompatibilityLayerConfig.PluginGuid);
-        MethodInfo original = AccessTools.Method(typeof(GUILayout), typeof(GUILayout).GetMethod("DoWindow", BindingFlags.Static | BindingFlags.NonPublic)?.Name); 
+        MethodInfo original = AccessTools.Method(typeof(GUILayout), typeof(GUILayout).GetMethod("DoWindow", BindingFlags.Static | BindingFlags.NonPublic)?.Name);
         MethodInfo prefix = AccessTools.Method(typeof(ModCompatibilityLayer), nameof(DoWindow_Prefix));
         harmony.Patch(original, new HarmonyMethod(prefix));
         Logger.LogInfo("Patched GUILayout.DoWindow!");

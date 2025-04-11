@@ -8,7 +8,7 @@ namespace BepinexModCompatibilityLayer.Classes {
     private Rect _windowRect;
     private string _windowTitle;
     private PermanentValues _properties;
-    
+
     public int PreferredWindowId => _preferredWindowId;
 
     public string WindowTitle {
@@ -25,7 +25,7 @@ namespace BepinexModCompatibilityLayer.Classes {
       _windowRect = windowRect;
       _windowTitle = windowTitle;
     }
-    
+
     internal string SaveWindow() {
       _properties.X = _windowRect.x;
       _properties.Y = _windowRect.y;
@@ -34,14 +34,14 @@ namespace BepinexModCompatibilityLayer.Classes {
       _properties.WindowTitle = _windowTitle;
       return JsonConvert.SerializeObject(_properties);
     }
-    
+
     internal void LoadWindow(string properties) {
       _properties = JsonConvert.DeserializeObject<PermanentValues>(properties);
       _preferredWindowId = _properties.StartingWindowId;
       _windowRect = new Rect(_properties.X, _properties.Y, _properties.Width, _properties.Height);
       _windowTitle = _properties.WindowTitle;
     }
-    
+
     public void Draw() {
       GUILayout.Window(_preferredWindowId, _windowRect, _windowFunction, _windowTitle);
     }
